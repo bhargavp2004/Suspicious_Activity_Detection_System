@@ -1,0 +1,21 @@
+{% load static tailwind_tags %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suspicious Activity Detection | Home </title>
+    {% tailwind_css %}
+</head>
+
+<body>
+    <div class="flex w-full h-screen bg-gradient-to-tr from-gray-900 from-5% via-gray-950 via-50% to-gray-900 to-20% flex-col items-center justify-center z-0">
+        <h1 class="text-1xl text-blue-600 font-bold sm:text-4xl md:text-4xl font-bold">Welcome to Suspicious Activity Detection</h1>
+        <h4 class="text-1xl text-gray-300 sm:text-3xl md:text-3xl text-gray-300 mt-5">Protecting your environment with AI/ML</h4>
+        <form action="{% url 'predict_and_save_video' %}" class="mt-5">
+            <button type="submit" class="bg-blue-600 border-2 mt-4 border-3 border-gray-800 p-3 rounded text-gray-300 cursor-pointer">Proceed</button>
+        </form>
+    </div>
+</body>
+
+</html>

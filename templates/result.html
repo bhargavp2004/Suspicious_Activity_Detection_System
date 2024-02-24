@@ -15,7 +15,7 @@
         <!-- <h1 class="text-1xl text-blue-600 font-bold sm:text-4xl md:text-4xl font-bold mb-10">Suspicious Activity Detection System</h1> -->
         <div class="flex flex-col h-1/2 w-full sm:w-1/2 md:w-1/2 items-center justify-center">
             {% if actualfile %}
-            <video width='100%' controls>
+            <video width='100%' height="200px" controls>
                 <source src='{{ MEDIA_URL}}{{ actualfile }}' type='video/mp4'>
                 <source src='{{ MEDIA_URL}}{{ actualfile }}' type='video/avi'>
                 Your browser does not support the video tag.
@@ -25,7 +25,7 @@
         {% endif %}
         {% if videofile %}
         <div class="flex flex-col h-1/2 w-full  sm:w-1/2 md:w-1/2 items-center justify-center">
-            <video width='100%' controls>
+            <video width='100%' height="200px" controls>
                 <source src='{{ MEDIA_URL}}{{ videofile }}' type='video/avi'>
                 <source src='{{ MEDIA_URL}}{{ videofile }}' type='video/mp4'>
                 Your browser does not support the video tag.

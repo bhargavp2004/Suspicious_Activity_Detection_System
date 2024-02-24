@@ -13,13 +13,14 @@ import cv2
 from pathlib import Path
 
 IMAGE_HEIGHT, IMAGE_WIDTH = 64, 64
-SEQUENCE_LENGTH = 30
-CLASSES_LIST = ["Explosion", "fights", "NormalVideos", "Shooting", "Stealing"]
+SEQUENCE_LENGTH = 20
+CLASSES_LIST = ["fights", "Normal", "Shooting"] 
+
 BASE_DIR = Path(__file__).resolve().parent.parent
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 def load_trained_model():
-    model_path = r'D:\B.TECH\6TH SEMESTER\Machine Learning\Project\Suspicious Activity Detection\Suspicious_Activity_Detection_ProjectML\Suspicious_Human_Activity_Detection.h5'
+    model_path = r'D:\B.TECH\6TH SEMESTER\Machine Learning\Project\Suspicious Activity Detection\Suspicious_Activity_Detection_ProjectML\Suspicious_Human_Activity_Detection_CNN_LSTM.keras'
     model = load_model(model_path)
     print("Model Loaded Successfully!")
     return model
